@@ -1,17 +1,17 @@
-import toDo from './todo';
+import todo from './todo';
 
-const toDos = (state=[], action) => {
+const todos = (state=[], action) => {
 	switch(action.type) {
 		case 'ADD_TODO':
 			return [
 				...state,
-				toDo(undefined, action)
+				todo(undefined, action)
 				];
 		case 'TOGGLE_TODO': 
-			return state.map(t => toDo(t,action))
+			return state.map(t => todo(t,action))
 		default:
 			return state;
 	}
 }
 
-export default toDos;
+export default todos;

@@ -4,8 +4,11 @@ import store from './store';
 import App from './App';
 import './index.css';
 
-const render = () => {ReactDOM.render(
-  <App todos={store.getState()}/>,
+const render = () => {
+	console.log('mmmmmmmmmmmmmmmmmmmmmmmmmmm')
+	console.log(store.getState().todos)
+  ReactDOM.render(
+  <App todos={store.getState().todos}/>,
   document.getElementById('root')
 )};
 

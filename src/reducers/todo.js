@@ -1,13 +1,12 @@
 
-const toDo = (state=[], action) => {
+const todo = (state=[], action) => {
 	switch(action.type) {
 		case 'ADD_TODO':
-			return [...state,
-					{
-						id:action.id,
-						text:action.text,
-						completed:false
-					}];
+			return {
+					id:action.id,
+					text:action.text,
+					completed:false
+					};
 		case 'TOGGLE_TODO':
 			if(state.id != action.id) {
 					return state;
@@ -19,4 +18,4 @@ const toDo = (state=[], action) => {
 	}
 }
 
-export default toDo;
+export default todo;
